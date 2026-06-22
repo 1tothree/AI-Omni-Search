@@ -4,7 +4,7 @@
 
 祝大家用的愉快，玩的开心(^o^)，帮我点一下右边的★， 让更多人看到。
 
->Quickly summon AI by typing shortcuts in the address bar (e.g., qw + Space + Content) or by selecting text on a webpage with your mouse.
+>Quickly summon AI by typing shortcuts in the address bar (e.g., qw + Space + Content) or by selecting text on a webpage.
 Have fun and enjoy using it! (^o^) If you find this helpful, please drop a ★ (Star) on the top right to make it visible to more people.
 
 ---
