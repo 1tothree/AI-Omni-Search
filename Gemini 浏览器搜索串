@@ -1,0 +1,29 @@
+// ==UserScript==
+// @name         Gemini 浏览器搜索串
+// @namespace    http://tampermonkey.net/
+// @version      1.0
+// @match        https://gemini.google.com/app*
+// @grant        none
+// @run-at       document-end
+// ==/UserScript==
+
+(function() {
+    'use strict';
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q') || urlParams.get('prompt');
+    if (!query) return;
+
+    // 等待富文本输入框加载
+    const checkExist = setInterval(() => {
+        const inputEl = document.querySelector('div[contenteditable="true"], textarea');
+        if (inputEl) {
+            clearInterval(checkExist);
+            inputEl.focus();
+            // 模拟用户输入，把词塞进 Gemini 的输入框
+            document.execCommand('insertText', false, decodeURIComponent(query));
+            // 清理 URL 上的参数防止二次刷新重复输入
+            const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+            window.history.replaceState({path:newUrl}, '', newUrl);
+        }
+    }, 300);
+})();
