@@ -18,7 +18,7 @@ Have fun and enjoy using it! (^o^) If you find this helpful, please drop a ★ (
  Chrome  `设置` -> `搜索引擎` -> `管理搜索引擎和网站搜索` 中，点击 **「网站搜索」** 旁的 **添加**，将以下表格中的内容逐一填入：
  >Go to Chrome `Settings` -> `Search engine` -> `Manage search engines and site search`. Under the **"Site search"** section, click the **Add** button and fill in the fields one by one.
 
-| 搜索引擎名称(Name) | 快捷字词 (Keyword) | 网址格式（用 `%s` 代替搜索字词） |
+| 搜索引擎名称(Name) | 快捷字词 (Keyword) | 网址格式（Adress） |
 | :--- | :---: | :--- |
 | 通义千问  | `qw` | `https://qianwen.com/?q=%s` |
 | 豆包 | `db` | `https://www.doubao.com/chat/url-action?action={"pluginId":"Send_Message","payload":{"text":"%s"}}` |
