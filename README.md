@@ -1,10 +1,10 @@
 # 🚀 AI Omni-Browser Search | 浏览器地址栏 & 划词 AI 搜索 V1.0
 
-通过地址栏通过输入简写（如 `qw+空格+内容`）或者鼠标划词选中网页文本 ，快速呼叫 AI。
+通过地址栏通过输入简写（如 `qw+空格+内容`）或者鼠标划词选中网页文本右键 ，快速呼叫 AI。
 
 古法搜索最后的荣光，祝大家用的愉快，玩的开心(^o^)。帮我点一下★， 让更多人看到。
 
->Quickly summon AI by typing shortcuts in the address bar (e.g., qw + Space + Content) or by selecting text on a webpage.
+>Quickly summon AI by typing shortcuts in the address bar (e.g., qw + Space + Content) or by highlighting text on a webpage and right-clicking.
 Have fun and enjoy using it! (^o^) If you find this helpful, please drop a ★ (Star) to make it visible to more people.
 
 ---
