@@ -14,6 +14,7 @@ Have fun and enjoy using it! (^o^) If you find this helpful, please drop a ★ (
 ### 方案 A：浏览器设置直达 Direct Browser Settings
 
 如果您使用的是Chrome 或者 Edge浏览器，可以直接在设置中添加：
+
 （注：千问、豆包免扩展，DS/哈吉米/GPT+油猴 支持一键直达结果；GPT免扩展仅支持搜索内容填充对话框）
 >(Note: Qianwen and Doubao natively support auto-sending without extensions. DeepSeek /Gemini/ChatGPT + Tampermonkey all support one-click direct access to results. Without extensions, ChatGPT only supports pre-filling the search content into the dialogue box).
 
