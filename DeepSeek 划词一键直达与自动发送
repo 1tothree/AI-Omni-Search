@@ -1,0 +1,67 @@
+// ==UserScript==
+// @name         DeepSeek 划词一键直达与自动发送
+// @namespace    http://tampermonkey.net/
+// @version      2.0
+// @description  绕过 React/Vue 状态拦截，完美实现 DeepSeek 自动填入与发送
+// @author       YourName
+// @match        https://chat.deepseek.com/*
+// @grant        none
+// @run-at       document-end
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q');
+
+    if (query) {
+        const searchText = decodeURIComponent(query);
+
+        const checkExist = setInterval(function() {
+            // 通过标签名和 placeholder 属性更精准地定位输入框
+            const textarea = document.querySelector('textarea[placeholder*="发送消息"]') || document.querySelector('#chat-input');
+
+            if (textarea) {
+                clearInterval(checkExist);
+
+                // 🔥 核心突破：绕过 React 16+ 的受控组件值拦截机制
+                const setter = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, "value").set;
+                setter.call(textarea, searchText);
+
+                // 触发原生 input 事件，强行让 React 监听到状态改变
+                textarea.dispatchEvent(new Event('input', { bubbles: true }));
+
+                // 延迟 400ms 等待 DOM 状态和按钮激活
+                setTimeout(() => {
+                    // 聚焦到输入框
+                    textarea.focus();
+
+                    // 方案 A：直接模拟按下 Enter 键触发官方的键盘监听
+                    const enterEvent = new KeyboardEvent('keydown', {
+                        bubbles: true,
+                        cancelable: true,
+                        key: 'Enter',
+                        code: 'Enter',
+                        keyCode: 13,
+                        which: 13
+                    });
+                    textarea.dispatchEvent(enterEvent);
+
+                    // 方案 B（兜底）：如果 Enter 没触发，直接暴力寻找当前最新带 click 属性的发送按钮
+                    setTimeout(() => {
+                        // 寻找邻近的所有可点击的 div 或 button（DeepSeek 发送图标通常是个 div）
+                        const buttons = textarea.parentElement.querySelectorAll('div, button');
+                        buttons.forEach(btn => {
+                            // 只要不是禁用的，并且大概率是发送图标的元素就点过去
+                            if (btn.getAttribute('disabled') !== 'true' && btn.offsetHeight > 0) {
+                                btn.click();
+                            }
+                        });
+                    }, 100);
+
+                }, 400);
+            }
+        }, 200);
+    }
+})();
