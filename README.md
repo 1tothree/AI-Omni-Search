@@ -1,4 +1,4 @@
-# 🚀 AI Omni-Search | 浏览器地址栏 & 划词 AI 搜索 V1.0
+# 🚀 AI Omni-Browser Search | 浏览器地址栏 & 划词 AI 搜索 V1.0
 
 通过地址栏通过输入简写（如 `qw+空格+内容`）或者鼠标划词选中网页文本 ，快速呼叫 AI。
 
