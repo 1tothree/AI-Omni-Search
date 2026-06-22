@@ -13,7 +13,7 @@ Have fun and enjoy using it! (^o^) If you find this helpful, please drop a ★ (
 
 ### 方案 A：浏览器设置直达 Direct Browser Settings
 （注：千问、豆包免扩展，DS/哈吉米/GPT+油猴 支持一键直达结果；GPT免扩展仅支持搜索内容填充对话框）
->(Note: Qianwen and Doubao natively support auto-sending without extensions. DeepSeek + Tampermonkey, Gemini + Tampermonkey, and ChatGPT + Tampermonkey all support one-click direct access to results. Without extensions, ChatGPT only supports pre-filling the search content into the dialogue box).
+>(Note: Qianwen and Doubao natively support auto-sending without extensions. DeepSeek /Gemini/ChatGPT + Tampermonkey all support one-click direct access to results. Without extensions, ChatGPT only supports pre-filling the search content into the dialogue box).
 
  Chrome  `设置` -> `搜索引擎` -> `管理搜索引擎和网站搜索` 中，点击 **「网站搜索」** 旁的 **添加**，将以下表格中的内容逐一填入：
  >Go to Chrome `Settings` -> `Search engine` -> `Manage search engines and site search`. Under the **"Site search"** section, click the **Add** button and fill in the fields one by one.
