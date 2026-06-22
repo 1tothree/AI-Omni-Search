@@ -17,7 +17,7 @@
 
 | 搜索引擎名称 | 快捷字词 (Keyword) | 网址格式（用 `%s` 代替搜索字词） |
 | :--- | :---: | :--- |
-| 通义千问  | `qw` | `https://tongyi.aliyun.com/qianwen/?q=%s` |
+| 通义千问  | `qw` | `https://qianwen.com/?q=ai` |
 | 豆包 | `db` | `https://www.doubao.com/chat/url-action?action={"pluginId":"Send_Message","payload":{"text":"%s"}}` |
 | DeepSeek  | `ds` | `https://chat.deepseek.com/?q=%s` |
 | ChatGPT | `gpt` | `https://chatgpt.com/?q=%s` |
@@ -28,7 +28,7 @@
 如果你使用的是支持 JSON 批量导入的 Chrome 划词扩展（如 *Selection Search*、*沙拉查词*、*Glance Search* 等），可以直接复制以下代码块：
 
 ```json
-  { "name": "通义千问 划词搜", "keyword": "qw", "url": "[https://tongyi.aliyun.com/qianwen/?q=%s](https://tongyi.aliyun.com/qianwen/?q=%s)" },
+  { "name": "通义千问 划词搜", "keyword": "qw", "url": "[https://qianwen.com/?q=ai](https://qianwen.com/?q=ai" },
   { "name": "豆包 AI 划词搜", "keyword": "db", "url": "[https://www.doubao.com/chat/?q=%s](https://www.doubao.com/chat/?q=%s)" }](https://www.doubao.com/chat/url-action?action={"pluginId":"Send_Message","payload":{"text":"%s"}}),
   { "name": "DeepSeek 划词搜", "keyword": "ds", "url": "[https://chat.deepseek.com/?q=%s](https://chat.deepseek.com/?q=%s)" },
   { "name": "ChatGPT 划词搜", "keyword": "gpt", "url": "[https://chatgpt.com/?q=%s](https://chatgpt.com/?q=%s)" },
