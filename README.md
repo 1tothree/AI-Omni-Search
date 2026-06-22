@@ -1,4 +1,4 @@
-# 🚀 AI Omni-Search | Chrome 浏览器地址栏 & 划词 AI 搜索 V1.0
+# 🚀 AI Omni-Search | 浏览器地址栏 & 划词 AI 搜索 V1.0
 
 桌面浏览器 AI 网页版搜索配置串：
 
@@ -26,7 +26,7 @@
 
 ### 方案 B：第三方划词扩展导入 (JSON 数组格式)
 
-如果你使用的是支持 JSON 批量导入的 Chrome 划词扩展（如 *Selection Search*、*沙拉查词*、*Glance Search* 等），可以直接复制以下代码块：
+如果你使用的是支持 JSON 批量导入的 Chrome 划词扩展（如 *Selection Search*、*沙拉查词*、*Glance Search* 等），可以直接复制以下代码：
 
 ```json
   { "name": "通义千问 ", "keyword": "qw", "url": "[https://qianwen.com/?q=%s](https://qianwen.com/?q=%s" },
