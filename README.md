@@ -12,7 +12,7 @@ Have fun and enjoy using it! (^o^) If you find this helpful, please drop a ★ (
 ## 📦 核心配置数据
 
 ### 方案 A：浏览器设置直达 Direct Browser Settings
-（注：千问、豆包免扩展，原生支持；ds、哈吉米需要油猴脚本辅助；哈吉米、gpt仅支持搜索内容填充对话框）
+（注：千问、豆包免扩展，ds+油猴支持一键直达结果；ds、哈吉米需要油猴脚本辅助；哈吉米、gpt仅支持搜索内容填充对话框）
 >(Note: Tongyi Qianwen and Doubao natively support this without extensions; DeepSeek and Gemini require a Tampermonkey script; Gemini and ChatGPT only support filling the content into the dialogue box without auto-sending).
 
  Chrome  `设置` -> `搜索引擎` -> `管理搜索引擎和网站搜索` 中，点击 **「网站搜索」** 旁的 **添加**，将以下表格中的内容逐一填入：
