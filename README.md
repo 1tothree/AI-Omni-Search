@@ -1,4 +1,4 @@
-# 🚀 AI Omni-Search | 主流 AI 划词搜索配置集
+# 🚀 AI Omni-Search | 主流 AI 划词/地址栏 搜索配置集
 
 一套专为浏览器划词搜索扩展（如 Edge 划词搜索、Selection Search、PopClip 等）定制的 AI 快捷搜索配置串。一键导入，无缝切换当前最顶尖的 AI 助手。
 
