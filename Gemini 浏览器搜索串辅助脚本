@@ -1,29 +1,66 @@
 // ==UserScript==
-// @name         Gemini 浏览器搜索串
+// @name         Gemini 划词一键直达与自动发送
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @match        https://gemini.google.com/app*
+// @description  解析 URL 中的 q 参数，自动填入 Gemini 并发送
+// @author       YourName
+// @match        https://gemini.google.com/*
 // @grant        none
 // @run-at       document-end
 // ==/UserScript==
 
 (function() {
     'use strict';
-    const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get('q') || urlParams.get('prompt');
-    if (!query) return;
 
-    // 等待富文本输入框加载
-    const checkExist = setInterval(() => {
-        const inputEl = document.querySelector('div[contenteditable="true"], textarea');
-        if (inputEl) {
-            clearInterval(checkExist);
-            inputEl.focus();
-            // 模拟用户输入，把词塞进 Gemini 的输入框
-            document.execCommand('insertText', false, decodeURIComponent(query));
-            // 清理 URL 上的参数防止二次刷新重复输入
-            const newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
-            window.history.replaceState({path:newUrl}, '', newUrl);
-        }
-    }, 300);
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('q');
+
+    if (query) {
+        const searchText = decodeURIComponent(query);
+
+        // 每 200ms 轮询一次，等待 Gemini 的输入框加载完成
+        const checkExist = setInterval(function() {
+            // Gemini 采用的是 contenteditable 的 p 标签（富文本输入）
+            const editor = document.querySelector('div[contenteditable="true"] p') || document.querySelector('div[contenteditable="true"]');
+
+            if (editor) {
+                clearInterval(checkExist);
+
+                // 1. 填入文本（由于是富文本，需要修改 textContent 并在外层触发 input 事件）
+                editor.textContent = searchText;
+
+                // 触发一系列事件，确保 Gemini 的内部状态感知到文本变化
+                const parentEditable = editor.closest('div[contenteditable="true"]');
+                if (parentEditable) {
+                    parentEditable.dispatchEvent(new Event('input', { bubbles: true }));
+                    parentEditable.dispatchEvent(new Event('change', { bubbles: true }));
+                }
+
+                // 2. 延迟等待发送按钮被激活（解禁）
+                setTimeout(() => {
+                    // 方案 A：尝试寻找发送按钮并点击
+                    // Gemini 的发送按钮通常带有一个特殊的 aria-label，比如 "发送消息" (中文) 或 "Send message" (英文)
+                    const sendButton = document.querySelector('button[aria-label*="发送"], button[aria-label*="Send"], button[mat-icon-button]');
+
+                    if (sendButton && !sendButton.disabled) {
+                        sendButton.click();
+                    } else {
+                        // 方案 B：兜底——如果在不同语言下找不到按钮，直接在输入框按回车
+                        if (parentEditable) {
+                            parentEditable.focus();
+                            const enterEvent = new KeyboardEvent('keydown', {
+                                bubbles: true,
+                                cancelable: true,
+                                key: 'Enter',
+                                code: 'Enter',
+                                keyCode: 13,
+                                which: 13
+                            });
+                            parentEditable.dispatchEvent(enterEvent);
+                        }
+                    }
+                }, 500); // 适当延长到 500ms，Google 的框架响应有时需要一点缓冲
+            }
+        }, 200);
+    }
 })();
