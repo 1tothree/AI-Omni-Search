@@ -1,4 +1,4 @@
-# 🚀 AI Omni-Search | Chrome 浏览器地址栏 & 划词 AI 搜索
+# 🚀 AI Omni-Search | Chrome 浏览器地址栏 & 划词 AI 搜索 V1.0
 
 桌面浏览器AI 模型网页版搜索配置串：
 通过浏览器地址栏通过输入简写（如 `qw`）快速呼叫 AI，或者配合划词一键搜索选中文本。
@@ -14,11 +14,11 @@
 
 | 搜索引擎名称 | 快捷字词 (Keyword) | 网址格式（用 `%s` 代替搜索字词） |
 | :--- | :---: | :--- |
-| **通义千问 划词搜** | `qw` | `https://tongyi.aliyun.com/qianwen/?q=%s` |
-| **豆包 AI 划词搜** | `db` | `https://www.doubao.com/chat/url-action?action={"pluginId":"Send_Message","payload":{"text":"%s"}}` |
-| **DeepSeek 划词搜** | `ds` | `https://chat.deepseek.com/?q=%s` |
-| **ChatGPT 划词搜** | `gpt` | `https://chatgpt.com/?q=%s` |
-| **Gemini 划词搜** | `ge` | `https://gemini.google.com/app?q=%s` |
+| **通义千问 ** | `qw` | `https://tongyi.aliyun.com/qianwen/?q=%s` |
+| **豆包 AI ** | `db` | `https://www.doubao.com/chat/url-action?action={"pluginId":"Send_Message","payload":{"text":"%s"}}` |
+| **DeepSeek ** | `ds` | `https://chat.deepseek.com/?q=%s` |
+| **ChatGPT** | `gpt` | `https://chatgpt.com/?q=%s` |
+| **Gemini ** | `ge` | `https://gemini.google.com/app?q=%s` |
 
 ### 方案 B：第三方划词扩展导入 (JSON 数组格式)
 
