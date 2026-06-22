@@ -28,10 +28,10 @@
 如果你使用的是支持 JSON 批量导入的 Chrome 划词扩展（如 *Selection Search*、*沙拉查词*、*Glance Search* 等），可以直接复制以下代码块：
 
 ```json
-  { "name": "通义千问 划词搜", "keyword": "qw", "url": "[https://qianwen.com/?q=%s](https://qianwen.com/?q=%s" },
-  { "name": "豆包 AI 划词搜", "keyword": "db", "url": "[https://www.doubao.com/chat/?q=%s](https://www.doubao.com/chat/?q=%s)" }](https://www.doubao.com/chat/url-action?action={"pluginId":"Send_Message","payload":{"text":"%s"}}),
-  { "name": "DeepSeek 划词搜", "keyword": "ds", "url": "[https://chat.deepseek.com/?q=%s](https://chat.deepseek.com/?q=%s)" },
-  { "name": "ChatGPT 划词搜", "keyword": "gpt", "url": "[https://chatgpt.com/?q=%s](https://chatgpt.com/?q=%s)" },
-  { "name": "Gemini 划词搜", "keyword": "ge", "url": "[https://gemini.google.com/app?q=%s](https://gemini.google.com/app?q=%s)" }
+  { "name": "通义千问 ", "keyword": "qw", "url": "[https://qianwen.com/?q=%s](https://qianwen.com/?q=%s" },
+  { "name": "豆包 ", "keyword": "gpt", "url": "[https://www.doubao.com/chat/url-action?action={"pluginId":"Send_Message","payload":{"text":"%s"}}](https://www.doubao.com/chat/url-action?action={"pluginId":"Send_Message","payload":{"text":"%s"}})" },
+  { "name": "DeepSeek ", "keyword": "ds", "url": "[https://chat.deepseek.com/?q=%s](https://chat.deepseek.com/?q=%s)" },
+  { "name": "ChatGPT ", "keyword": "gpt", "url": "[https://chatgpt.com/?q=%s](https://chatgpt.com/?q=%s)" },
+  { "name": "Gemini ", "keyword": "ge", "url": "[https://gemini.google.com/app?q=%s](https://gemini.google.com/app?q=%s)" }
 
 
