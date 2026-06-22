@@ -9,7 +9,7 @@ Have fun and enjoy using it! (^o^) If you find this helpful, please drop a ★ (
 
 ---
 
-## 📦 核心配置数据
+## 📦 核心配置数据 Core Configuration
 
 ### 方案 A：浏览器设置直达 Direct Browser Settings
 
