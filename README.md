@@ -20,8 +20,9 @@
 | 通义千问  | `qw` | `https://qianwen.com/?q=%s` |
 | 豆包 | `db` | `https://www.doubao.com/chat/url-action?action={"pluginId":"Send_Message","payload":{"text":"%s"}}` |
 | DeepSeek  | `ds` | `https://chat.deepseek.com/?q=%s` |
-| ChatGPT | `gpt` | `https://chatgpt.com/?q=%s` |
 | Gemini | `ge` | `https://gemini.google.com/app?q=%s` |
+| ChatGPT | `gpt` | `https://chatgpt.com/?q=%s` |
+
 
 ### 方案 B：第三方划词扩展导入 (JSON 数组格式)
 
@@ -31,7 +32,8 @@
   { "name": "通义千问 ", "keyword": "qw", "url": "[https://qianwen.com/?q=%s](https://qianwen.com/?q=%s" },
   { "name": "豆包 ", "keyword": "gpt", "url": "[https://www.doubao.com/chat/url-action?action={"pluginId":"Send_Message","payload":{"text":"%s"}}](https://www.doubao.com/chat/url-action?action={"pluginId":"Send_Message","payload":{"text":"%s"}})" },
   { "name": "DeepSeek ", "keyword": "ds", "url": "[https://chat.deepseek.com/?q=%s](https://chat.deepseek.com/?q=%s)" },
-  { "name": "ChatGPT ", "keyword": "gpt", "url": "[https://chatgpt.com/?q=%s](https://chatgpt.com/?q=%s)" },
   { "name": "Gemini ", "keyword": "ge", "url": "[https://gemini.google.com/app?q=%s](https://gemini.google.com/app?q=%s)" }
+  { "name": "ChatGPT ", "keyword": "gpt", "url": "[https://chatgpt.com/?q=%s](https://chatgpt.com/?q=%s)" },
+
 
 
